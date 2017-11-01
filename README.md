@@ -4,6 +4,28 @@ Self-Driving Car Engineer Nanodegree Program
 ## Description
 In this project, I've used a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
 
+In this project, LIDAR and RADAR measurements for object (e.g. pedestrian, vehicles, or other moving objects) are used for tracking a object with the Extended Kalman Filter. There were continous LIDAR and RADAR measurements of the blue car with a noise errors. 
+
+The main step for tracking an object with LIDAR and RADAR:
+* use LIDAR measurements as it is and update filter
+* convert RADAT measurements to cartesian coordination as it is and update filter
+* estimate coordination
+
+![fusion](./radar_lidar_fusion.png "fusion")
+
+## Results
+Result of tracking an object with Kalman filter is shown on the following pictures, where
+
+ * blue car:  the object being tracked. In reality, it can be objects as pedestrian, vehicles, or other moving objects
+ * red circle: LIDAR measurement
+ * blue circle with motion direction: RADAR measurement
+ * green triangle: estimated position of tracked object (blue car)
+
+![detail](./screenshot_1.png "Deatil")
+
+![overall](screenshot_2.png "Overall")
+
+
 ## Instructions
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
@@ -91,8 +113,3 @@ for instructions and the project rubric.
     + remove write permissions so that the simulator can't write to log
  * Please note that the ```Eigen``` library does not initialize ```VectorXd``` or ```MatrixXd``` objects with zeros upon creation.
 
-## Results
-The results of kalman filter are shown at following screenshots from simulator:
-
-![detail][screenshot_1.jpg]
-![overall][screenshot_2.jpg]
