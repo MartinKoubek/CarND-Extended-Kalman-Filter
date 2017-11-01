@@ -6,7 +6,7 @@ In this project, I've used a kalman filter to estimate the state of a moving obj
 
 In this project, LIDAR and RADAR measurements for object (e.g. pedestrian, vehicles, or other moving objects) are used for tracking a object with the Extended Kalman Filter. There were continous LIDAR and RADAR measurements of the blue car with a noise errors. 
 
-The main step for tracking an object with LIDAR and RADAR:
+The main steps for tracking an object with LIDAR and RADAR:
 * use LIDAR measurements as it is and update filter
 * convert RADAT measurements to cartesian coordination as it is and update filter
 * estimate coordination
